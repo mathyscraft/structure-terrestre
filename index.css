@@ -1,0 +1,141 @@
+:root {
+    --switch-value: 0px;
+}
+body {
+    background-color: #f1f1f1;
+
+}
+
+* {
+    font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+#switch-mode {
+    width: 60px;
+    height: 30px;
+    padding: 0;
+    margin: 5px;
+    vertical-align: middle;
+    background-color: #474747;
+    border-radius: 15px;
+    border: none;
+}
+
+#switch-mode::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    margin-top: -15px;
+    border-radius: 50%;
+    background-color: #888888;
+    transition: 0.3s;
+    transform: translateX(var(--switch-value));
+}
+
+#switch-mode:hover::before {
+    background-color: #c4c4c4;
+}
+
+#container {
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+}
+
+#svg839 {
+    width: auto;
+    height: 100%;
+    margin: 20px;
+}
+
+#infoBloc {
+    padding: 10px;
+    margin: 10px 0;
+    width: 400px;
+    min-height: min-content;
+    height: min-content;
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    box-shadow: 5px 3px 12px 5px rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
+
+#infoBloc > h2 {
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+}
+
+#infoBloc #underline {
+    content: "";
+    display: block;
+    margin: auto;
+    width: 168px;
+    height: 2px;
+    background-color: black;
+    
+}
+
+.animation {
+    animation: apparition-barre 1s;
+}
+
+
+@keyframes apparition-barre {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 168px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container {
+        display: block;
+        text-align: center;
+    }
+    #svg839 {
+        width: 80%;
+        height: min-content;
+    }
+    #infoBloc {
+        margin: 20px auto;
+        width: 80%;
+    }
+}
+
+#infoBloc p , #infoBloc span{
+    font-size: 18px;
+}
+
+#infos h3 {
+    font-size: 22px;
+}
+
+#quizz {
+    margin-top: 20px;
+}
+
+input {
+    padding: 3px;
+    margin: 3px 6px;
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#quizz button {
+    display: block;
+    margin: 20px auto;
+    font-size: 18px;
+    padding: 10px;
+    
+}

@@ -1,0 +1,73 @@
+{
+    "croute-oceanique" : {
+        "couche": true,
+        "nom": "croute oceanique",
+        "roches": "basaltes et gabbros",
+        "etat": "solide",
+        "densite": "3"
+    },
+
+    "croute-continentale" : {
+        "couche": true,
+        "nom": "croute continentale",
+        "roches": "granites",
+        "etat": "solide",
+        "densite": "2.7"
+    },
+
+    "manteau-sup-litho" : {
+        "couche": true,
+        "nom": "manteau superieur lithosphérique",
+        "roches": "peridotites",
+        "etat": "solide",
+        "densite": "3.3"
+    },   
+
+    "manteau-sup-astheno" : {
+        "couche": true,
+        "nom": "manteau superieur asthénosphérique",
+        "roches": "péridotites",
+        "etat": "ductile",
+        "densite": "3.4 à 4.4"
+    },
+
+    "manteau-inferieur" : {
+        "couche": true,
+        "nom": "manteau inférieur",
+        "roches": "péridotites",
+        "etat": "solide",
+        "densite": "4.4 à 5.6"
+    },
+
+    "noyau-externe" : {
+        "couche": true,
+        "nom": "noyau externe",
+        "roches": "fer et nickel",
+        "etat": "liquide",
+        "densite": "9.5 à 11.8"
+    },
+    
+    "noyau-interne" : {
+        "couche": true,
+        "nom": "noyau interne",
+        "roches": "fer et nickel",
+        "etat": "solide",
+        "densite": "12.9 à 13.1"
+    },
+
+    "moho": {
+        "couche": false,
+        "nom": "moho",
+        "profondeur": "10 à 30km"
+    },
+    "gutenberg": {
+        "couche": false,
+        "nom": "Discontinuité de Gutenberg",
+        "profondeur": "2900km"
+    },
+    "lehmann": {
+        "couche": false,
+        "nom": "Discontinuité de lehmann",
+        "profondeur": "5100km"
+    }
+}

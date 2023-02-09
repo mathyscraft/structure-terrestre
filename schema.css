@@ -1,0 +1,83 @@
+path {
+    transition: 250ms ;
+}
+
+#croute-oceanique {
+    fill:#0f00b2;
+}
+#croute-oceanique:hover {
+    fill:#4f43ce;
+}
+
+
+#croute-continentale {
+    fill:#e4677c;
+}
+#croute-continentale:hover {
+    fill:#eb9aa6;
+}
+
+
+#manteau-sup-litho {
+    fill:#a6a6a6;
+}
+#manteau-sup-litho:hover {
+    fill:#bbbbbb;
+}
+
+
+#manteau-sup-astheno {
+    fill:#737373;
+}
+#manteau-sup-astheno:hover {
+    fill:#929292;
+}
+
+
+#manteau-inferieur {
+    fill:#404040;
+}
+#manteau-inferieur:hover {
+    fill:#4e4e4e;
+}
+
+
+#noyau-externe {
+    fill: #ff884c;
+}
+#noyau-externe:hover {
+    fill: #ffac83;
+}
+
+
+#noyau-interne {
+    fill: #ebec92ff;
+}
+#noyau-interne:hover {
+    fill: #fbfcc6;
+}
+
+
+#moho {
+    stroke: #4d004aff;
+}
+#moho:hover {
+    stroke: #9c1898;
+}
+
+
+#gutenberg {
+    stroke: #4d0000;
+}
+#gutenberg:hover {
+    stroke: #9b2222;
+}
+
+
+#lehmann {
+    stroke: #000861;
+}
+#lehmann:hover {
+    stroke: #2b35aa;
+
+}
