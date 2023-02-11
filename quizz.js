@@ -6,7 +6,14 @@ function infoBlocAnim() {
     }, 1010);
 }
 
-function clearQuizz() {
+function clearQuizz(oldElement, oldfill) {
+    if(oldElement !== undefined) {
+        if (oldfill){
+        oldElement.style.fill = "";
+        }else{
+        oldElement.style.stroke = "";
+        }
+    }
     let oldAnswers = document.querySelectorAll('.correct-answer')
     for(i = 0; i < oldAnswers.length; i++) {
         oldAnswers[i].innerHTML = "";
@@ -21,21 +28,29 @@ let answers = [];
 let divQuizz = document.getElementById('quizz');
 let inputQuizz = document.querySelectorAll('#quizz input');
 
+let oldElement= undefined;
+let oldElementFill;
 function startQuizz(element) {
-    clearQuizz()
+
+    clearQuizz(oldElement, oldElementFill)
+    oldElement = document.getElementById(element);
     infoBlocAnim()
     console.log(element)
     answers = []
-
+    
     document.getElementById('infos-discontinuite').hidden = true;
     document.getElementById('infos-couche').hidden = true;
     divQuizz.hidden = false;
     questionNbr = 0;
 
     if (data[element].couche) {
+        document.getElementById(element).style.fill = '#f1f1f1';
+        oldElementFill=true
         document.getElementById('quizz-couche').hidden = false;
         document.getElementById('quizz-discontinuite').hidden = true;
-    } else {answers
+    } else {
+        document.getElementById(element).style.stroke = '#f1f1f1';
+        oldElementFill=false
         document.getElementById('quizz-couche').hidden = true;
         document.getElementById('quizz-discontinuite').hidden = false;
     }
@@ -62,25 +77,10 @@ function checkResponse() {
     }
 }
 
-// function checkResponse() {
-//     for (i = 0; i < inputQuizz.length; i++) {
-//         if (inputQuizz[i].value === answers[questionNbr][i]) {
-//             console.log("OK")
-//         } else {
-//             console.log("ERREUR", answers[questionNbr][i])
-//         }
-//     }
-// }
-
-// let answers = [];
-//         let k = 0;
-//         for (i in data) {
-//          answers.push([])
-//             for(j in data[i]) {
-//               if (j !== "densite" && j !==  "couche") {
-//                     answers[k].push(data[i][j]);
-//               }
-//             }
-//           k++;
-//         }
-//         console.log(answers)
+window.addEventListener('keypress', (e) => {
+    if (quizzMode === true) {
+        if(e.key === "Enter") {
+            checkResponse()
+        }
+    }
+})

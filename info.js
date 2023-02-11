@@ -50,6 +50,7 @@ const outputDiv = document.getElementById('infos');
 let quizzMode = false;
 
 function switchMode() {
+    clearQuizz(oldElement, oldElementFill)
     quizzMode = !quizzMode;
     if (quizzMode) {
         css.setProperty('--switch-value', '30px');
