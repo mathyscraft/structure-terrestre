@@ -17,7 +17,7 @@
 
     "manteau-sup-litho" : {
         "couche": true,
-        "nom": "manteau superieur lithosphérique",
+        "nom": "manteau supérieur lithosphérique",
         "roches": "peridotites",
         "etat": "solide",
         "densite": "3.3"
@@ -25,7 +25,7 @@
 
     "manteau-sup-astheno" : {
         "couche": true,
-        "nom": "manteau superieur asthénosphérique",
+        "nom": "manteau supérieur asthénosphérique",
         "roches": "péridotites",
         "etat": "ductile",
         "densite": "3.4 à 4.4"
