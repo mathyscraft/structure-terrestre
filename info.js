@@ -20,12 +20,12 @@ function infoBlocAnim() {
 let quizzMode = false;
 
 function switchMode() {
-    clearQuizz(oldElement)
     quizzMode = !quizzMode;
     if (quizzMode) {
         css.setProperty('--switch-value', '30px');
         document.getElementById("infoBloc").style.opacity = "0";
     } else {
+        clearQuizz(oldElement)
         css.setProperty('--switch-value', '0px');
         document.getElementById("infoBloc").style.opacity = "0";
     }
