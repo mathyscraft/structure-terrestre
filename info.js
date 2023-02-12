@@ -26,6 +26,7 @@ function switchMode() {
         document.getElementById("infoBloc").style.opacity = "0";
     } else {
         clearQuizz(oldElement)
+        oldElement = undefined;
         css.setProperty('--switch-value', '0px');
         document.getElementById("infoBloc").style.opacity = "0";
     }
